@@ -1,0 +1,23 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button {
+  background-color: rgb(204, 124, 19);
+  border: none;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+  margin: 6px 3px;
+  display: inline-block;
+  border-radius: 50%
+}
+
+.button:hover {background-color:rgb(8, 8, 77)}
+
+.button:active {
+  background-color:darkorange;
+  box-shadow: 0 5px #666
+  transform: translateY(5px)
+}

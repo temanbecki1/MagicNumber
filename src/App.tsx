@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import "./styles.css";
 
 export default function App() {
+  //Implemented random number generator
   const generateRandomNumber = () => {
-    return Math.round(Math.random() * 100);
+    return Math.round(Math.random() * 1000);
   };
 
   const [number, setNumber] = useState(0);
@@ -16,14 +17,16 @@ export default function App() {
     setTestNumber(generateRandomNumber());
     setCorrect(false);
     setNumber(0);
-    setGuessCount(1);
+    setGuessCount(0);
     setUsedNumbers([]);
   };
 
+  //Compare user input and testNumber
   const compare = (num, testNum) => {
     return num == testNum;
   };
 
+  //Increase guesscount + 1
   const increment = () => {
     setGuessCount(guessCount + 1);
   };
@@ -39,6 +42,7 @@ export default function App() {
 
   const onClick = () => {
     if (compare(number, testNumber)) {
+      increment();
       setCorrect(true);
     } else {
       console.log(testNumber);
